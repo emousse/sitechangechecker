@@ -1,11 +1,16 @@
-const libnotify = require('libnotify')
+const libnotify = require('node-notifier')
 
 function notify(diffPixels) {
   if (diffPixels > 0) {
-    libnotify.notify(`${process.env.SITEURL} has changed! GAAAAAAAAH!`, {
+    libnotify.notify({
       title: 'Site Checker',
-      time: 1000 * 60 * 60 * 5
+      message: `${process.env.SITEURL} has changed! GAAAAAAAAH!`,
+      open: `${process.env.SITEURL}`,
+      sound: true
     })
+  }
+  else {
+    console.log('nothing change !');
   }
 }
 

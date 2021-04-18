@@ -13,6 +13,7 @@
     "dotenv": "^6.2.0",
     "node-notifier": "^9.0.1",
     "pixelmatch": "^4.0.2",
-    "puppeteer": "^1.11.0"
+    "puppeteer": "^1.11.0",
+    "pushbullet": "^2.4.0"
   }
 }
